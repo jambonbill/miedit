@@ -1,0 +1,21 @@
+#editor {
+    position: absolute; /* Added */
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+canvas.minitel-screen{
+	z-index: 9999;
+	position: absolute;
+    top:56px;
+    right:0;
+    cursor:pointer;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+    -webkit-font-smoothing: none;
+}
