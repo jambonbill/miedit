@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Minimal Minitel viewer</title>
+  </head>
+  <body>
+    <div id="miedit">
+      <x-minitel data-speed="1200" data-color="true">
+        <canvas class="minitel-screen" id=screen data-minitel="screen"></canvas>
+      </x-minitel>
+    </div>
+
+    <script src="minitel.min.js"></script>
+    <script src="../library/miniscript/miniscript.js"></script>
+
+<script>
+"use strict"
+window.addEventListener("load", function() {
+    const emulator = Minitel.startEmulators()[0]
+
+    let ms=miniscript();
+    ms.write("READY");
+
+    emulator.send(ms.data);
+})
+
+</script>
+
+</body>
+</html>
