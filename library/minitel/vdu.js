@@ -114,11 +114,17 @@ Minitel.VDU = class {
          * @property {FontSprite} G1d DRCS mosaic font sprites
          * @private
          */
+        let g0='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAACgAQMAAACG4/gfAAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAAA7AAAAOwASfED60AAAAHdElNRQfhBQ0LFxgx/MYLAAACvElEQVQ4y31UoY7kSAx9OypQ4IBBg4DRyaBBwYAAg2hUwKBBQLQKGLA6LWiw4MDAgJKuP20/YD9iP+Skvud0emZ0o11rNP3ksp9d9qsAd7MOYiuBH1HcCWoH/+JYoXQu69UhBF8q4hClBqBHrGK9s9QPgAE0s0gR6TdmNBH3YYRJgMnhBG3hYWO8n8ITMQNjdksfAJBzsXWtUYItO8FoJbmvz1BHt65+Rt+IZ55pRfUTwWhoq6/vOvxouZS29XxAEMYtrOVa6TMvXTXeXlpLNVXDsW7VU1Q32vo7ZimS15YUhSN3IRj6ubiwq0ns5OLKaRzaBiZZ8gYGs7zK2AXBr5gNX1uLVh3nWrcNMqm6OWqV9MIeCTRVZ5TXySv/wewP41UHznDnUf0/cxHtmkfxMmulQDBiZgkOWV3Xl/Li6H3xWrRAJw5ZCMZhMAL53TRUpVm02onc5oxBc/XRYROkhiT4p9PiC9rEcsu4wAfoWFLZSY53tu49M7JtkuhCYr5tW93Lc0hLrcm5wDePS8iPMc6VbFm3Rn65QVUzJiEzSyJ0NG6p9EGXx5A0VZcTARvm5AkGxjBL7FW9/ra2Vxu53MeWgRkLcoTOTMu5a3j+LKyXM+a/2KNmwTwvONWsGJ9EWa/tJKc7W//Ke2EqKz7qBYciOAnBaKKzHC/sueGrlAt7Jqn0l+hZT+GhJtUfGbM/6Msb4f4jcZBq7QXyHXwgVBEfmlQl+MeDKjyxSk4LcuByUyjtSVNLRpBI/HAX9ac3dRPyxI2gfAf+zgSs1Zb87RP6iUd5Ycznsd1A2j2WI4sAf+48r4S7XYGf/BTItkpeMBaQ2fN5eQb+PSIvcqbnB2SK7cqBMduan6j9DaT3z3DjubFf+Yge4rNBUB5CRQRIiWImsJypPYJQW4AlnnoAMxXbYm7fzettxFdc/wN/jK6fiKp77QAAAABJRU5ErkJggg==';
+
+        let g1='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAACgAQMAAACG4/gfAAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAAA8IAAAPCAXwnuBMAAAAHdElNRQfhBx0HKg6MA8Z/AAAAdUlEQVQ4y6WTMQoAIQwE01n6VTu/7Q+85ODMgbKFM9WCZCSLmkFa6Tbq/IUgQnOGk+E9+QIwF6c6GYIVgLk708kQrADMamgr6tDYVc/QLHqGZtEzNAv2dQ7v56pnaBZT0Cx6hmbBfunhN131DM1iU2gWU8z8AAKipvAkox1OAAAAAElFTkSuQmCC';
+
+        let blank='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAACgCAYAAAC8LWpcAAAAV0lEQVR42u3SsREAMAgDMcj+OzsbUKYIUuuKP6oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeKd/PzBJpv1s/wABBBBAAAEEEGCvC4CRBBCAav6pAAAAAElFTkSuQmCC';
+
         this.font = {
-            "G0": this.loadFont("font/ef9345-g0.png"),
-            "G1": this.loadFont("font/ef9345-g1.png"),
-            "G0d": this.loadFont("font/blank.png"),
-            "G1d": this.loadFont("font/blank.png")
+            "G0": this.loadFont(g0),
+            "G1": this.loadFont(g1),
+            "G0d": this.loadFont(blank),
+            "G1d": this.loadFont(blank)
         }
 
         this.changeColors(color)
